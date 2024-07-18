@@ -1,0 +1,9 @@
+com\ajay\controller\AuthController.class
+com\ajay\config\AppConfig.class
+com\ajay\domain\USER_ROLE.class
+com\ajay\controller\HomeController.class
+com\ajay\model\TwoFactorAuth.class
+com\ajay\domain\VerificationType.class
+com\ajay\repository\UserRepository.class
+com\ajay\CoinQuestApplication.class
+com\ajay\model\User.class

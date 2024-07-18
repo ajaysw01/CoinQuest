@@ -1,0 +1,9 @@
+C:\Ajay\Practice\CoinQuest\src\main\java\com\ajay\CoinQuestApplication.java
+C:\Ajay\Practice\CoinQuest\src\main\java\com\ajay\config\AppConfig.java
+C:\Ajay\Practice\CoinQuest\src\main\java\com\ajay\controller\AuthController.java
+C:\Ajay\Practice\CoinQuest\src\main\java\com\ajay\controller\HomeController.java
+C:\Ajay\Practice\CoinQuest\src\main\java\com\ajay\domain\USER_ROLE.java
+C:\Ajay\Practice\CoinQuest\src\main\java\com\ajay\domain\VerificationType.java
+C:\Ajay\Practice\CoinQuest\src\main\java\com\ajay\model\TwoFactorAuth.java
+C:\Ajay\Practice\CoinQuest\src\main\java\com\ajay\model\User.java
+C:\Ajay\Practice\CoinQuest\src\main\java\com\ajay\repository\UserRepository.java
