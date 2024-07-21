@@ -9,6 +9,7 @@ import com.ajay.response.AuthResponse;
 import com.ajay.service.CustomUserDetailsService;
 import com.ajay.service.EmailService;
 import com.ajay.service.TwoFactorOTPService;
+import com.ajay.service.WatchListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -37,6 +38,9 @@ public class AuthController {
     @Autowired
     private EmailService emailService;
 
+    @Autowired
+    private WatchListService watchListService;
+
     @PostMapping("signup")
     public ResponseEntity<AuthResponse> register(@RequestBody User user) throws Exception {
         User isEmailExist = userRepository.findByEmail(user.getEmail());
@@ -51,6 +55,7 @@ public class AuthController {
 
         User savedUser = userRepository.save(newUser);
 
+        watchListService.createWatchList(savedUser);
         Authentication auth = new UsernamePasswordAuthenticationToken(
                 user.getEmail(),
                 user.getPassword()

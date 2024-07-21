@@ -18,7 +18,7 @@ public class WalletServiceImpl implements WalletService{
 
     @Override
     public Wallet getUserWallet(User user) {
-        Wallet wallet = walletRepository.finByUserId(user.getId());
+        Wallet wallet = walletRepository.findByUserId(user.getId());
         if(wallet == null){
             Wallet newWallet = new Wallet();
             newWallet.setUser(user);
@@ -27,6 +27,21 @@ public class WalletServiceImpl implements WalletService{
 
         return wallet;
     }
+//@Override
+//public Wallet getUserWallet(User user) {
+//    // Try to find the wallet for the given user
+//    Wallet wallet = walletRepository.findByUserId(user.getId());
+//
+//    // If no wallet is found, create a new one and save it
+//    if (wallet == null) {
+//        wallet = new Wallet();
+//        wallet.setUser(user);
+//        wallet = walletRepository.save(wallet); // Save the new wallet to the database
+//    }
+//
+//    return wallet; // Return the existing or newly created wallet
+//}
+
 
     @Override
     public Wallet addBalance(Wallet wallet, Long money) {
