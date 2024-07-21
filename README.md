@@ -1,1 +1,0 @@
-# CoinQuest
